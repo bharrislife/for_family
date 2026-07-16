@@ -96,6 +96,42 @@
     *   **What still failed:** Nothing—this is an outstanding, production-ready output layout.
     *   **What to try next:** Package this into a clean, reusable template that a stranger could run.
 
+------
+
+## 🤖 Cross-Model Comparison (ChatGPT vs. Claude)
+
+To test the robustness and portability of our engineered prompt, the final Step 5 prompt was executed on both **ChatGPT (GPT-4o)** and **Claude**. 
+
+### The Raw Outputs
+
+#### ChatGPT (GPT-4o) Output:
+| What they wrote | What you actually do |
+| :--- | :--- |
+| Leverage deep synergies across cross-functional teams | Talk to other teams and unblock work. |
+| Coordinate and optimize agile paradigms | Run standups, plan sprints, keep tickets updated. |
+| Ensuring maximum velocity | Remove blockers so developers ship faster. |
+| Alignment with enterprise stakeholders | Keep managers informed and negotiate changing priorities. |
+
+#### Claude Output:
+| What they wrote | What you actually do |
+| :--- | :--- |
+| Leverage deep synergies across cross-functional teams to coordinate and optimize agile paradigms, ensuring maximum velocity and alignment with enterprise stakeholders. | Sync sprints with product/ops/marketing, ship code fast, keep leadership informed. |
+
+*Translation: You're basically gluing together people from different departments so everyone ships stuff on time and leadership doesn't freak out. Agile "paradigms" = sprint ceremonies. "Velocity" = how much code lands each week. "Stakeholders" = your boss's boss.*
+
+---
+
+### Detailed Analysis & Comparison
+
+| Metric | ChatGPT (GPT-4o) | Claude (Anthropic) |
+| :--- | :--- | :--- |
+| **Constraint Adherence** | **Excellent (Structural) / Weak (Tone)**<br>Strictly adhered to the table structure, separating the source text into clean rows. It respected the "under 12 words" constraint. | **Weak (Structural) / Excellent (Tone)**<br>Failed the structural constraint entirely. Instead of mapping row-by-row, it jammed the whole prompt into one row and dumped prose text below the table. |
+| **Tone & Persona** | **Too Corporate/Polite**<br>Despite being told to be a "blunt, gritty mentor," it drifted back to safe HR phrases like "negotiate changing priorities" and "keep managers informed." | **Incredibly Gritty & Authentic**<br>Nailed the blunt developer lead voice perfectly. Phrases like "gluing together people," "leadership doesn't freak out," and calling out "your boss's boss" are highly realistic. |
+| **Failure Points** | Drifts back to robotic, safe defaults when forced to stick to tight word-count rules. | Sacrifices strict markdown structural layouts to prioritize a natural, human-sounding conversational voice. |
+
+#### Key Takeaway:
+ChatGPT is a structural workhorse—if you need rigid, predictable data tables, it will format them flawlessly, even if the tone is slightly dry. Claude is a creative realist—it will give you incredibly authentic, human-sounding prose, but it will occasionally bend your formatting rules to let its "personality" shine.
+
 ---
 
 ## The Final Reusable Prompt Template
